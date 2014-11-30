@@ -1,0 +1,22 @@
+hr
+.form-group.col-sm-12
+  | Permissions
+.form-group.required.col-sm-12
+  table.table
+    tr
+      th Interface
+      th Full Access
+      th Read Only
+      th No Access
+    - INTERFACES.each do |interface|
+      tr
+        td
+          .control-label
+            = t("interfaces.#{interface}")
+        - AUTHORITIES.each do |authority|
+          td
+            - if resource.new_record?
+              = permission_radio_button_tag_for resource, interface, authority, 'full_access'
+            - else
+              = permission_radio_button_tag_for resource, interface, authority,
+                resource.permission.permissions[interface]

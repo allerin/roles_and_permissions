@@ -1,0 +1,18 @@
+= object_errors(role.object)
+fieldset
+  .row
+    .form-group.required.col-sm-12
+      .col-sm-3
+        = role.label :name, 'Role Name: '
+      .col-sm-9
+        = role.text_field :name, class: 'form-control'
+fieldset
+  .row
+    .form-group
+      .col-sm-8
+      .col-sm-2
+        = role.submit "#{role.object.persisted? ? 'Update' : 'Add new'} Role", class: 'btn btn-success btn-block'
+      .col-sm-2
+        = toggle_status_link(role.object, {class: 'btn btn-danger btn-block'}) if role.object.persisted?
+fieldset
+  = render partial: '/permissions/form', locals: {resource: role.object}

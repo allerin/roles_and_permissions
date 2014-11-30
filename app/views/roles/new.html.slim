@@ -1,0 +1,4 @@
+.content-box-large
+  h2 Add New Role
+  = form_for @role, html: { class: 'client-validations' } do |f|
+    = render :partial => 'form', :locals => {:role => f}

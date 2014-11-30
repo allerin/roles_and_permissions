@@ -1,0 +1,4 @@
+en:
+  interfaces:
+    manage_users: Manage Users
+    # Add your interfaces in underscored format and their translations

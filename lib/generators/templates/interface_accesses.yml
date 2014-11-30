@@ -1,0 +1,18 @@
+#interface_name1:
+#  full_access:
+#    controller_name1:
+#    - action1
+#    - action2
+#    - action3
+#    controller_name2:
+#    - action1
+#    - action2
+#  read_only:
+#    controller_name1:
+#    - action1
+#    - action2
+## Default controller-actions to be skipped
+#skippables:
+#  skippable_controller1:
+#  - skippable_action1
+#  - skippable_action2
